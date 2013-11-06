@@ -1,8 +1,15 @@
-#top-body{
+div#top-body{
 /*    background-color: rgba(250, 53, 6, 0.3);*/
-        background: #000 url(../img/b5.png) repeat fixed right bottom;  
+    background: #000 url(../img/b5.png) repeat fixed right bottom;
+/*    margin: 0 auto;*/
+/*    text-align: left;*/
+    width: 980px;
+
 }
 #header{
+    clear:both;
+    float:left;
+    position:relative;
 }
 .logo{
     float: left;
@@ -11,55 +18,158 @@
 	height: 70px;
 }
 .sub{
+}
+.sub p{
+    float: left;
     vertical-align: middle;
     text-align:center
+}
+.sub img{
+    width: 200px
 }
 .slink{
     text-align:right
 }
 #main{
     clear:both;
+    float:left;
+    position:relative;
+/*    height: 350px;*/
+}
+.clearfix:after {
+    clear: both;
+    content: ".";
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
 }
 section.news{
     float:left;
-    width:45%;
+    width:450px;
     background: none repeat scroll 0 0 rgba(94, 187, 255, 0.6);
     border-radius: 4px 4px 4px 4px;
-    padding: 10px;
+    padding:10px;
     margin: 10px;
-/*    position: relative;*/
+    position: relative;
 }
 section.news article{
     background: none repeat scroll 0 0 #FFFFFF;
     margin: 0 10px 0 0;
-    padding: 15px;
+    padding: 5px;
     border: dashed 1px rgb(0,0,0);
+}
+section.news article span{
+    border: 1px dotted #919191;
+    float: left;
+    margin: 0 5px 0 0;
+    padding: 8px 0 0 0;
+    height:52px;
+}
+section.news article p{
+    margin:5px;
+}
+section.news article span img{
+    width: 60px;
 }
 section.gallery{
     float:right;
-    width:45%;
+    width:450px;
     background: none repeat scroll 0 0 rgba(94, 187, 255, 0.6);
     border-radius: 4px 4px 4px 4px;
     padding: 10px;
     margin: 10px;
-/*    position: relative;*/
+/*
+    position: relative;
+*/
 }
-section.gallery .imgbox{
-    
-}
+
 .g-thumb {
     float: left;
+    background: none repeat scroll 0 0 rgba(17, 255, 72, 0.6);
+    border-radius: 4px 4px 4px 4px;
     list-style-type: none;
     margin: 0 4px 5px 0;
-    padding: 3px;
+    padding: 6px;
     position: relative;
 }
 
-.img{
+.g-thumb img{
+    border-radius: 4px 4px 4px 4px;
     width:120px;
     height:120px;
 }
 
 #column {
     clear:both;
+    background: none repeat scroll 0 0 rgba(94, 187, 255, 0.6);
+    border-radius: 4px 4px 4px 4px;
+    padding: 10px;
+    margin: 10px;
+    height:100px;
 }
+/********* HOWTO ***********/
+section.howto{
+    float:left;
+    background: none repeat scroll 0 0 rgb(255, 255, 24);
+    margin: 0 10px 0 0;
+    padding: 5px;
+    border: dashed 1px rgb(0,0,0);
+    width:20%;
+}
+section.howto article{
+    width:100px;
+}
+
+/********* STORY ***********/
+section.story{
+    float:left;
+    background: none repeat scroll 0 0 rgb(255, 255, 24);
+    margin: 0 10px 0 0;
+    padding: 5px;
+    border: dashed 1px rgb(0,0,0);
+    width:20%;
+}
+section.story article{
+    width:100px;
+}
+
+/********* ABOUT ***********/
+section.about{
+    float:left;
+    background: none repeat scroll 0 0 rgb(255, 255, 24);
+    margin: 0 10px 0 0;
+    padding: 5px;
+    border: dashed 1px rgb(0,0,0);
+    width:20%;
+}
+section.about article{
+    width:100px;
+}
+
+/********* FB ***********/
+section.fb{
+    float:left;
+    background: none repeat scroll 0 0 rgb(255, 255, 24);
+    margin: 0 10px 0 0;
+    padding: 5px;
+    border: dashed 1px rgb(0,0,0);
+    width:20%;
+}
+section.fb article{
+    width:100px;
+}
+/********* FOOTER ***********/
+#footer{
+    float:left;
+    width:25%;
+    background: none repeat scroll 0 0 rgba(94, 187, 255, 0.6);
+    border-radius: 4px 4px 4px 4px;
+    padding: 10px;
+    margin: 10px;
+    width:96%;
+}
+section.fb article{
+    width:100px;
+}
+
