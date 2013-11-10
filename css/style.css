@@ -1,8 +1,8 @@
-div#top-body{
+body#top-body{
 /*    background-color: rgba(250, 53, 6, 0.3);*/
-    background: #000 url(../img/b5.png) repeat fixed right bottom;
-/*    margin: 0 auto;*/
-/*    text-align: left;*/
+    background: #000 url(../img/C1+.png) repeat fixed right bottom;
+    margin: 0 auto;
+    text-align: left;
     width: 980px;
 
 }
@@ -10,6 +10,15 @@ div#top-body{
     clear:both;
     float:left;
     position:relative;
+    margin-top:10px;
+}
+.hr{
+    clear:both;
+    background: #000 url(../img/b6.png) repeat fixed right bottom;
+    margin: 0 auto;
+    text-align: left;
+    width: 980px;
+    height:3px;    
 }
 .logo{
     float: left;
@@ -18,17 +27,20 @@ div#top-body{
 	height: 70px;
 }
 .sub{
+    float:left;
 }
 .sub p{
-    float: left;
+/*    float: left;*/
     vertical-align: middle;
-    text-align:center
+    text-align:center;
+    margin: 0px 0px 0px 0px;
 }
 .sub img{
     width: 200px
 }
 .slink{
-    text-align:right
+    float:left;
+/*    text-align:right*/
 }
 #main{
     clear:both;
@@ -46,8 +58,8 @@ div#top-body{
 }
 section.news{
     float:left;
-    width:450px;
-    background: none repeat scroll 0 0 rgba(94, 187, 255, 0.6);
+    width:350px;
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.44);
     border-radius: 4px 4px 4px 4px;
     padding:10px;
     margin: 10px;
@@ -55,27 +67,29 @@ section.news{
 }
 section.news article{
     background: none repeat scroll 0 0 #FFFFFF;
-    margin: 0 10px 0 0;
+    border-radius: 4px 4px 4px 4px;
+    margin: 3px 3px 3px 3px;
     padding: 5px;
-    border: dashed 1px rgb(0,0,0);
+    height:85px;
+/*    border: solid 1px rgb(0,0,0);*/
 }
 section.news article span{
-    border: 1px dotted #919191;
+/*    border: 1px dotted #919191;*/
     float: left;
-    margin: 0 5px 0 0;
-    padding: 8px 0 0 0;
-    height:52px;
+    margin: 5px;
 }
 section.news article p{
     margin:5px;
 }
+section.news article p.date{
+    font-size:12px
+}
 section.news article span img{
-    width: 60px;
 }
 section.gallery{
     float:right;
-    width:450px;
-    background: none repeat scroll 0 0 rgba(94, 187, 255, 0.6);
+    width:500px;
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.44);
     border-radius: 4px 4px 4px 4px;
     padding: 10px;
     margin: 10px;
@@ -83,21 +97,24 @@ section.gallery{
     position: relative;
 */
 }
-
+section.gallery ul{
+    margin:0px;
+    padding:0px;
+}
 .g-thumb {
     float: left;
-    background: none repeat scroll 0 0 rgba(17, 255, 72, 0.6);
+    background: none repeat scroll 0 0 rgba(209, 65, 1, 0.6);
     border-radius: 4px 4px 4px 4px;
     list-style-type: none;
-    margin: 0 4px 5px 0;
-    padding: 6px;
+    margin: 4px;
+    padding: 1px;
     position: relative;
 }
 
 .g-thumb img{
     border-radius: 4px 4px 4px 4px;
-    width:120px;
-    height:120px;
+    width:100px;
+    height:100px;
 }
 
 #column {
@@ -162,7 +179,7 @@ section.fb article{
 /********* FOOTER ***********/
 #footer{
     float:left;
-    width:25%;
+/*    width:980px;*/
     background: none repeat scroll 0 0 rgba(94, 187, 255, 0.6);
     border-radius: 4px 4px 4px 4px;
     padding: 10px;
