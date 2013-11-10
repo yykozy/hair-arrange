@@ -1,6 +1,6 @@
 body#top-body{
 /*    background-color: rgba(250, 53, 6, 0.3);*/
-    background: #000 url(../img/C1+.png) repeat fixed right bottom;
+    background: #000 url(https://github.com/yykozy/hair-arrange/blob/master/img/C1+.png?raw=true) repeat fixed right bottom;
     margin: 0 auto;
     text-align: left;
     width: 980px;
@@ -14,7 +14,7 @@ body#top-body{
 }
 .hr{
     clear:both;
-    background: #000 url(../img/b6.png) repeat fixed right bottom;
+    background: #000 url(https://github.com/yykozy/hair-arrange/blob/master/img/b6.png?raw=true) repeat fixed right bottom;
     margin: 0 auto;
     text-align: left;
     width: 980px;
