@@ -1,74 +1,110 @@
-<html>
+<!DOCTYPE html>
+<html lang="ja">
 <head>
-<link href="https://raw.github.com/yykozy/hair-arrange/master/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+<!--
+<link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+-->
+      
+    <title>おしゃりーだ</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="../../css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+<!--
+    <link href="../../css/offcanvas.css" rel="stylesheet">
+-->
+    
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+
+<!--
+<link href="http://static.tumblr.com/bhwyguc/5Lomwf38p/style.css" rel="stylesheet" type="text/css" media="all" />
+-->
+    <meta charset="utf-8" />
+<link href="http://localhost/hair-arrange/css/style.css" rel="stylesheet" type="text/css" media="all" />
 <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script type="text/javascript" src="../../js/search.js"></script>
+<script type="text/javascript" src="http://localhost/hair-arrange/js/sunrise.js"></script>
+<!--
+<script type="text/javascript" src="http://static.tumblr.com/bhwyguc/REhmwf30d/sunrise.js"></script>
+-->
+    <script src="http://static.tumblr.com/bhwyguc/AHcmwf3ks/jquery.mixitup.min.js"></script>
 
 </head>
-<body id="top-body">
+<body>
+<div id="mask" class="clearfix"></div>
+<div id="modal">
+        <div class="modalBody">
+            <p class="close">×close</p>
+            <p id="modalImg"></p>
+        </div>
+</div>
+<div id="top">
     <div id="header" class="clearfix">
         <div class="logo">
-            <img class="top-logo" src="../../img/ic_launcher.png" title="toplogo">
-        <img class="top-logo" src="../../img/logo_leader.png" title="toplogo">
+<!--
+        <img class="top-logo" src="http://localhost/hair-arrange/img/print-i46.png" title="toplogo">
+        <img class="top-logo" src="http://localhost/hair-arrange/img/logo_leader.png" title="toplogo">
+-->
+        <img class="top-logo" src="http://static.tumblr.com/bhwyguc/GO8mwf05z/print-i46.png" title="toplogo">
+<!--
+            <img class="top-logo" src="http://static.tumblr.com/bhwyguc/cDYmwezbh/logo_leader.png" title="toplogo">
+-->
+        <img class="top-logo" src="http://localhost/hair-arrange/img/logo_leader_.png" title="toplogo">
         </div>
         <div class="sub">
-            <p>おしゃれままあつまれ！！</p>
-            <span>
-            <img src="../../img/hiyoko.png" />
-            </span>
+<!--
+<p><img src="http://static.tumblr.com/bhwyguc/00Gmwf2vr/wood_kanban2.png" class="kanban"/></p>
+-->
+            <p><img src="http://localhost/hair-arrange/img/wood_kanban_w.png" class="kanban"/></p>
+            <p>
+            <img src="http://static.tumblr.com/bhwyguc/elwmwezc5/hiyoko.png" class="hiyoko"/>
+            </p>
         </div>
+        <!--
         <div class="slink">
             FB:いいね
             TW:1111
         </div>
-        <div class="hr"></div>
+        -->
     </div>
+    <div class="hr">
+<!--
+        <p>ホーム</p>
+            <p>おしゃりーだとは</p>
+            <p>ニュース</p>
+            <p>ギャラリー</p>
+-->
+</div>
     <div id="main" class="clearfix">
-        <section class="news">
-            <p>NEWS</p>
-<!--
-            <article>
-                <span>
-                    <img src="../../img/neko02.jpg" alt="dummy01" />
-                </span>
-                <p class="date">2013.11.01</p>
-                <p>hoge</p>
-            </article>
-            <article>
-                <span>
-                <img src="../../img/neko02.jpg" alt="dummy01" />
-                    </span>
-                <p>2013.11.02</p>
-                <p>hoge</p>
-            </article>
-            <article>
-                <span>
-                <img src="../../img/neko02.jpg" alt="dummy01" />
-                    </span>
-                <p>2013.11.03</p>
-                <p>hoge</p>
-            </article>
--->
+        <div id="left">
+            <section id="slideshow"  class="clearfix">
+                <ul  class="clearfix"></ul>
             </section>
-        <section class="gallery">
-            <p>Gallery</p>
-            <ul>
+            <section class="news">
+                <p>NEWS</p>
+            </section>
+        </div>
+        <div id="right">
+            <section class="gallery">
 <!--
-                <li class="g-thumb">
-                    <img src="../../img/neko01.jpg" alt="dummy01" />
-                </li>
-                <li class="g-thumb">
-                    <img src="../../img/neko01.jpg" alt="dummy01" />
-                </li>
-                <li class="g-thumb">
-                    <img src="../../img/neko01.jpg" alt="dummy01" />
-                </li>
-                <li class="g-thumb">
-                    <img src="../../img/neko01.jpg" alt="dummy01" />
-                </li>
+<p>Gallery</p>
 -->
-            </ul>
-        </section>
+                <ul id="mix-filter" class="clearfix"></ul>
+                <ul id="mix-grid">
+                </ul>
+            </section>
+        </div>
     </div>
     <div id="column">
         <section class="howto">
@@ -89,7 +125,8 @@
         </section>
     </div>
     <div id="footer">
-        FOOTER
+<a href="http://hibana.rgr.jp/" target="_blank" title="フリー素材*ヒバナ *　 *"><img alt="フリー素材*ヒバナ *　 *" src="http://hibana.rgr.jp/img/88x31_banner.png" width="88" height="31" /></a>
     </div>
+</div>
 </body>
 </html>

@@ -1,24 +1,48 @@
-body#top-body{
+body{
+/*    background: #000 url(http://localhost/hair-arrange/img/c1.png) repeat fixed right bottom;*/
+/*
+    background: url(http://localhost/hair-arrange/img/park.jpg) no-repeat fixed center;
+    background-size:cover;
+*/
+        background: #000 url(http://localhost/hair-arrange/img/snow-a3.png) repeat fixed right bottom;
+/*    background: #000 url(http://static.tumblr.com/bhwyguc/Kzqmweza0/9.png) repeat fixed right bottom;*/
+    /*background:rgba(170, 195, 252, 0.44);*/
+
+}
+div#top{
 /*    background-color: rgba(250, 53, 6, 0.3);*/
-    background: #000 url(https://github.com/yykozy/hair-arrange/blob/master/img/C1+.png?raw=true) repeat fixed right bottom;
-    margin: 0 auto;
     text-align: left;
-    width: 980px;
 
 }
 #header{
-    clear:both;
-    float:left;
+/*    clear:both;
+    float:left;*/
     position:relative;
-    margin-top:10px;
+/*    margin-top:10px;*/
+    width: 980px;
+    margin: 10px auto 0 auto;
+/*    background-color: #fff;*/
 }
 .hr{
+    position:relative;
     clear:both;
-    background: #000 url(https://github.com/yykozy/hair-arrange/blob/master/img/b6.png?raw=true) repeat fixed right bottom;
+/*    float:left;*/
+    background: url(http://localhost/hair-arrange/img/water01.png) repeat scroll left top;
+/*    background: #000 url(http://localhost/hair-arrange/img/K6.png) repeat fixed right bottom;*/
+/*
+    background: #000 url(http://static.tumblr.com/bhwyguc/fPrmwezms/k6.png) repeat fixed right bottom;
     margin: 0 auto;
+*/
     text-align: left;
-    width: 980px;
-    height:3px;    
+/*    width: 980px;*/
+    width:auto;
+    height:30px; 
+}
+.hr p{
+    float:left;
+    margin-right:20px;
+    margin-left:20px;
+    color:#000;
 }
 .logo{
     float: left;
@@ -30,13 +54,21 @@ body#top-body{
     float:left;
 }
 .sub p{
-/*    float: left;*/
-    vertical-align: middle;
+    float: left;
+/*    vertical-align: middle;*/
     text-align:center;
     margin: 0px 0px 0px 0px;
 }
-.sub img{
-    width: 200px
+.hiyoko{
+    float:left;
+    margin-top:40px;
+    margin-bottom:0;
+    width: 200px;
+    height:45px;
+}
+.kanban{
+    float:left;
+    height:90px;
 }
 .slink{
     float:left;
@@ -44,9 +76,11 @@ body#top-body{
 }
 #main{
     clear:both;
-    float:left;
+/*    float:left;*/
     position:relative;
 /*    height: 350px;*/
+    width: 980px;
+    margin: 0 auto;
 }
 .clearfix:after {
     clear: both;
@@ -56,10 +90,59 @@ body#top-body{
     height: 0;
     visibility: hidden;
 }
-section.news{
+#left{
     float:left;
     width:350px;
+}
+#right{
+    float:left;
+}
+#slideshow{
+/*
     background: none repeat scroll 0 0 rgba(255, 255, 255, 0.44);
+*/
+    border-radius: 4px 4px 4px 4px;
+    margin:10px 10px 30px 10px;
+/*    background: url(http://localhost/hair-arrange/img/hagire_blue01.png) no-repeat scroll center;*/
+    background-size:contain;
+    height:300px;
+    width:300px;    
+}
+#slideshow ul{
+    position:relative;
+    display: block;
+    margin:0 5 0 0 ;
+/*
+    width:300px;
+    height:300px;
+*/
+}
+#slideshow ul li{
+    position:absolute;
+    top:0px;
+    left:0px;
+    margin:0;
+    padding:0;
+    */
+    /*
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+*/
+}
+
+section{
+/*
+    background: #000 url(http://localhost/hair-arrange/img/9.png) repeat fixed right bottom;
+*/
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.2);
+}
+section.news{
+    clear:both;
+/*    
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.44);
+*/
+    background: #000 url(http://localhost/hair-arrange/img/2.png) repeat scroll right bottom;
     border-radius: 4px 4px 4px 4px;
     padding:10px;
     margin: 10px;
@@ -68,10 +151,11 @@ section.news{
 section.news article{
     background: none repeat scroll 0 0 #FFFFFF;
     border-radius: 4px 4px 4px 4px;
-    margin: 3px 3px 3px 3px;
-    padding: 5px;
-    height:85px;
+    margin: 3px 3px 5px 3px;
+    padding: 15px;
+/*    height:50px;*/
 /*    border: solid 1px rgb(0,0,0);*/
+    font-family:'Times New Roman','ＭＳ Ｐ明朝',serif;
 }
 section.news article span{
 /*    border: 1px dotted #919191;*/
@@ -82,48 +166,99 @@ section.news article p{
     margin:5px;
 }
 section.news article p.date{
-    font-size:12px
+    font-size:12px;
 }
-section.news article span img{
+section.news article p.new:after{
+    margin:5px 5px;
+    content: url(http://static.tumblr.com/bhwyguc/SFFmwezna/new021_18.gif);
 }
+section.news article p img{
+    height:100px;
+    width:100px;
+    float:left;
+    margin:0px 15px 0px 0px; 
+    border-radius: 4px;
+}
+section.news article div.title{
+/*    font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;*/
+    font-size:1.5em;
+    font-weight:bold;
+/*    font-family:'Times New Roman','ＭＳ Ｐ明朝',serif;*/
+    margin-bottom:3px;
+}
+
 section.gallery{
     float:right;
-    width:500px;
-    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.44);
+    width:600px;
+    background: none repeat scroll 0 0 rgba(255, 255, 255, 0);
     border-radius: 4px 4px 4px 4px;
-    padding: 10px;
+/*    padding: 20px;*/
     margin: 10px;
+    height:500px;
 /*
     position: relative;
 */
 }
+section.gallery p{
+    margin:0;
+    padding:0;
+}
 section.gallery ul{
+    clear:both;
     margin:0px;
     padding:0px;
 }
-.g-thumb {
-    float: left;
-    background: none repeat scroll 0 0 rgba(209, 65, 1, 0.6);
-    border-radius: 4px 4px 4px 4px;
+li {
     list-style-type: none;
-    margin: 4px;
-    padding: 1px;
-    position: relative;
 }
 
-.g-thumb img{
+section.gallery ul li.filter{
+    float:left;
+/*    font-size:smaller;*/
+    margin-right:3px;
+}
+
+section.gallery ul#mix-filter{
+/*    height:20px;*/
+    margin-bottom:10px;
+}
+section.gallery ul#mix-grid{
+    overflow:hidden;
+    position:absolute;
+/*    top:120px;*/
+}
+.mix{
+    opacity: 0;
+    display: none;
+    float: left;
+    background: none repeat scroll 0 0 rgba(0, 68, 253, 0.51);
     border-radius: 4px 4px 4px 4px;
-    width:100px;
-    height:100px;
+    margin: 5px;
+    padding: 2px;
+    position: relative;
+    width:79px;
+    height:79px;
+}
+
+.mix img{
+    border-radius: 4px 4px 4px 4px;
+    width:75px;
+    height:75px;
+}
+.mix img:hover{
+    cursor:pointer;
 }
 
 #column {
     clear:both;
     background: none repeat scroll 0 0 rgba(94, 187, 255, 0.6);
     border-radius: 4px 4px 4px 4px;
+/*
     padding: 10px;
-    margin: 10px;
+    margin: 10px;*/
+    width:980px;
     height:100px;
+    margin: 0 auto;
 }
 /********* HOWTO ***********/
 section.howto{
@@ -190,3 +325,28 @@ section.fb article{
     width:100px;
 }
 
+#modal{display:none;}
+.modalBody{
+    position: absolute;
+    z-index:1000;
+    background: #FFFFFF;
+    width:600px;
+    top:10%;
+    padding:10px;
+    border-radius: 8px;
+}
+.maskBK{
+    position: fixed;
+    z-index:999; 
+    top:0px;
+    left:0px;
+    height:100%;
+    width:100%;
+    background:#000; opacity: 0.9;filter: alpha(opacity=90);-moz-opacity:0.90;margin:0px;padding:0px;}
+.close{cursor: pointer;}
+
+#modalImg img.top{
+}
+#modalImg img{
+    margin:5px;
+}
