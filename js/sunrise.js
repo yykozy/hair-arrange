@@ -1,9 +1,23 @@
 $(function(){
     domain ="kawaii-max.tumblr.com";
     api_key ="ip4lAAyVgm2947UJinn73PaKsoiK81wLu2EggqRo5LAKJHbZa1 ";
+    var category = {
+        all     :'すべて',
+        boys    :'男の子',
+        girls	:'女の子',
+        short	:'ショート',
+        medium	:'ミディアム',
+        long	:'ロング',
+    };
+    var event = {
+        'leader 2013.08'            :'おしゃりーだ@2013.08',
+        'kids collection 2013.11'	:'関西キッズコレクション@2013.11',        
+        'leader 2013.11'            :'おしゃりーだ@2013.11',
+    };
+
     var gettumblr=function(opt){
         $.getJSON(
-        "http://api.tumblr.com/v2/blog/"+domain+"/posts?api_key="+api_key+"&jsonp=?&tag="+opt.tag,
+        "http://api.tumblr.com/v2/blog/"+domain+"/posts?api_key="+api_key+"&jsonp=?&tag="+opt.tag+"&offset="+opt.offset,
             opt.callback
         );
     };
@@ -11,7 +25,11 @@ $(function(){
     var getdate=function(datestr){
         return datestr.replace(/:.. GMT/g,'').replace(/-/g,'.');
     }
-    gettumblr({tag:'news',callback:function(data){
+    
+    //preloading
+    $('#indicator').fadeIn(300);
+
+    gettumblr({tag:'news',limit:0,callback:function(data){
             console.log(data);
             if(data.response){
                 var posts=data.response.posts;
@@ -34,14 +52,40 @@ $(function(){
                     $("#main section.news").append(html);
                 }
             }
-        }});
-    gettumblr({tag:'gallery',callback:function(data){
-//            console.log(data);
+    }});
+    
+    
+    var wrap=function(offset,datas){
+        console.log(datas);
+        gettumblr({tag:'gallery',offset:offset,callback:function(data){
             if(data.response){
                 var posts=data.response.posts;
-                var alltags=['all'];
+                var total = data.response.total_posts;
 
                 for(var i=0;i<posts.length;i++){
+                    datas.push(posts[i]);
+                }
+
+                if(offset+20<total){
+                    wrap(offset+20,datas);
+                }else{
+                    make_grid(datas);
+                }
+            }
+        }});
+    }
+    
+    var datas=[];
+    wrap(0,datas);
+
+    var make_grid=function(posts){
+            var alltags={all:0};
+            //preloading
+            $('#indicator').fadeOut(500);
+//            console.log(data);
+    
+                for(var i=0;i<posts.length;i++){
+                    alltags['all']++;
                     var url=posts[i].short_url;
                     var date=posts[i].date;
                     var tags=posts[i].tags;
@@ -51,15 +95,15 @@ $(function(){
                         var title=posts[i].caption;
                         var src=posts[i].photos[0].alt_sizes[3];
                         var img=$("<img src="+src.url+" />");
-//                        var href=$("<a href='"+url+"' ></a>").append(img);
-//                        console.log(src);
-//                        html.append(href);//.css("padding",(100-src.width)/2);
                         html.append(img);    
-                        for(var j=0;j<tags.length;j++){
+                        var eventlabel={};
+                        for(var j=0;j<tags.length;j++){ 
                             if (tags[j]!="gallery"){
                                 html.addClass(tags[j]);
-                                if(alltags.indexOf(tags[j])==-1){
-                                    alltags.push(tags[j]);
+                                if(alltags[tags[j]]){
+                                    alltags[tags[j]]++;
+                                }else{
+                                    alltags[tags[j]]=1;
                                 }
                             }
                         }
@@ -70,71 +114,73 @@ $(function(){
                             urls.push(url);
                         }
                         $.data(html.get(0),'url',urls);
-//                        console.log(urls);
-//                        console.log($.data(html.get(0),'url'));
                     }
 
                     $("#mix-grid").append(html);
                 }
-//console.log(alltags);
-                //<button type="button" class="btn btn-info">Info</button>
-                        for(var j=0;j<alltags.length;j++){
-                            var button=$("<button/>").attr("type","button").addClass("btn btn-primary").html(alltags[j]);
-                            $("<li class='filter' data-filter='"+alltags[j]+"'/>").append(button)
-/*
-                            $("<li class='filter' data-filter='"+alltags[j]+"'/>").html(alltags[j])
-.hover(
-                                function(){$(this).css("cursor","pointer").css("font-size","larger");},
-                                function(){$(this).css("cursor","auto").css("font-size","smaller");}
-                            )
-                            */
-                            .appendTo($("#mix-filter"));
+
+                for(var j in alltags){
+                    var badge=$("<span class='badge badge-danger'>"+alltags[j]+"</span>");
+                    var button=$("<button/>").attr("type","button");
+                    if(typeof(category[j])!='undefined'){
+                        //console.log(category[j]);
+                        button.addClass("btn btn-info btn-sm").append(category[j]+" ").append(badge);
+                    }else if(typeof(event[j])!='undefined'){ // if(alltags[j].match(/[0-9]+/)){
+                        button.addClass("btn btn-warning btn-sm").append(event[j]+" ").append(badge);
+                    }else{
+                        continue;
+                    }
+                    $("<li class='filter' data-filter='"+j+"'/>").append(button)
+                    .appendTo($("#mix-filter"));
+                }
+                
+                $('.mix').click(function(){
+                    $("#mask").addClass('maskBK');
+                    $("#top").css("position","fixed");
+                    $("#modal").fadeIn(500);
+                    var id = $(this).attr('data-tgt');
+                    var url= $.data(this,'url');
+                    var w=$("body").width();
+            
+                    for(var i=0;i<url.length;i++){
+                        var col=$("<div/>").appendTo($("#modalImg .row"));
+                        if(url.length==5){
+                            if(i<2){
+                                col.addClass('col-sm-6','col-md-6');
+                            }else{
+                                col.addClass('col-sm-4','col-md-4');
+                            }
+                        }else if(url.length==4 || url.length==2){
+                                col.addClass('col-sm-6','col-md-6');
+                        }else if(url.length==3){
+                            if(i<1){
+                                col.addClass('col-sm-12','col-md-12');
+                            }else{
+                                col.addClass('col-sm-6','col-md-6');
+                            }                
                         }
-	$('.mix').click(function(){
-        var id = $(this).attr('data-tgt');
-        var url= $.data(this,'url');
-/*
-        wn = '.' + $(this).attr('data-tgt');
-		var mW = $(wn).find('.modalBody').innerWidth() / 2;
-		var mH = $(wn).find('.modalBody').innerHeight() / 2;
-		$(wn).find('.modalBody').css({'margin-left':-mW,'margin-top':-mH});
-		$(wn).fadeIn(500);
-*/
-        var w=$("body").width();
-        $("#mask").addClass('maskBK');
-        $("#top").css("position","fixed");
-        $("#modal").fadeIn(500);
-        for(var i=0;i<url.length;i++){
-            $("<img/>").attr("src",url[i]).appendTo($("#modalImg"));
-        }
+                        $("<a class='thumbnail'/>").append($("<img/>").attr("src",url[i])).appendTo(col);
+                    }
+                });
 
-    $("#modalImg img").ready(function(){
-            var mw=$("#modalBody").width();
-//            console.log(w);
-//            console.log(mw);
-            $(".modalBody").css("left",(w/2 - 283));
-        });
-
-    });
-	$('.close,#mask').click(function(){
-		$("#modal").fadeOut(500,function(){
-            $("#top").css("position","relative");
-            $("#modalImg").html("");
-            $("#mask").removeClass('maskBK');
-        });
-	});
+                $('.close,#mask').click(function(){
+                    $("#modal").fadeOut(500,function(){
+                        $("#top").css("position","relative");
+                        $("#modalImg .row").html("");
+                        $("#mask").removeClass('maskBK');
+                    });
+                });
 
                 
-    //Mixitup!
-    $('#mix-grid').mixitup({
-      targetSelector: '.mix',
-      filterSelector: '.filter',
-//      sortSelector: '.sort'
-    });
+                //Mixitup!
+                $('#mix-grid').mixitup({
+                  targetSelector: '.mix',
+                  filterSelector: '.filter',
+            //      sortSelector: '.sort'
+                })
+    }
 
-            }
-        }});
-    
+//SlideShow
     var images=[
 /*
         "0007.jpg",
@@ -160,10 +206,10 @@ $(function(){
             var h=$(e.target).height();
             //w>h && w>300 -> w=300
             if (w>h && w>300) $(e.target).width(300).parent().css({left:0,top:(300-(300*h/w))/2});
-            console.log($(e.target).css("top"));
+//            console.log($(e.target).css("top"));
             //w<h && h>300 -> h=300
             if (w<h && h>300) $(e.target).height(300).parent().css({top:0,left:(300-(300*w/h))/2});
-            console.log($(e.target).css("top"));
+//            console.log($(e.target).css("top"));
             if(i>0){
                 $(e.target).hide();
             }
@@ -183,4 +229,5 @@ $(function(){
             num++;
         }
     },3500);
+    
 });

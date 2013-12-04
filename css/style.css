@@ -194,15 +194,17 @@ section.gallery{
     border-radius: 4px 4px 4px 4px;
 /*    padding: 20px;*/
     margin: 10px;
-    height:500px;
+    height:1000px;
 /*
     position: relative;
 */
 }
+/*
 section.gallery p{
     margin:0;
     padding:0;
 }
+*/
 section.gallery ul{
     clear:both;
     margin:0px;
@@ -215,7 +217,7 @@ li {
 section.gallery ul li.filter{
     float:left;
 /*    font-size:smaller;*/
-    margin-right:3px;
+    margin:3px;
 }
 
 section.gallery ul#mix-filter{
@@ -315,11 +317,14 @@ section.fb article{
 #footer{
     float:left;
 /*    width:980px;*/
-    background: none repeat scroll 0 0 rgba(94, 187, 255, 0.6);
+    background: none repeat scroll 0 0 rgba(255, 255, 24, 0.37);
+/*
     border-radius: 4px 4px 4px 4px;
     padding: 10px;
     margin: 10px;
-    width:96%;
+*/
+    height:30px;
+    width:100%;
 }
 section.fb article{
     width:100px;
@@ -330,8 +335,10 @@ section.fb article{
     position: absolute;
     z-index:1000;
     background: #FFFFFF;
-    width:600px;
+    /*width:600px;*/
+    width:800px;
     top:10%;
+    margin:0 auto;
     padding:10px;
     border-radius: 8px;
 }
@@ -347,6 +354,39 @@ section.fb article{
 
 #modalImg img.top{
 }
-#modalImg img{
-    margin:5px;
+#modalImg{
+    clear:both;
+/*    margin:5px;*/
+}
+.modalBody img{
+/*    border:1px #000 solid;    */
+}
+
+.badge-warning{
+    background-color:#ff9d00;
+}
+.badge-danger{
+    background-color:#ff8383;
+}
+.copy{
+    font-size:0.7em;
+        margin:0px;
+}
+h1{
+    font-size:0.1px;
+    height:0.1px;
+    margin:0px;
+    display:none;
+}
+
+#indicator{
+    margin-top:100px;
+    display:none;
+}
+.loading_text{
+    text-align:center;
+}
+.loading_heart{
+    background: url(http://localhost/hair-arrange/img/loading_heart.gif) no-repeat scroll center transparent;
+    height:50px;
 }
