@@ -183,7 +183,7 @@ $(function(){
                             }
                         }else if(url.length==4 || url.length==2){
                                 col.addClass('col-sm-6','col-md-6');
-                        }else if(url.length==1 || url.lenght==3){
+                        }else if(url.length==1 || url.length==3){
                             if(i==0){
                                 col.addClass('col-sm-12','col-md-12');
                             }else{
