@@ -4,7 +4,7 @@ body{
     background: url(http://localhost/hair-arrange/img/park.jpg) no-repeat fixed center;
     background-size:cover;
 */
-        background: #000 url(https://raw.github.com/yykozy/hair-arrange/master/img/snow-a3.png) repeat fixed right bottom;
+        background: #000 url(https://rawgithub.com/yykozy/hair-arrange/master/img/snow-a3.png) repeat fixed right bottom;
 /*    background: #000 url(http://static.tumblr.com/bhwyguc/Kzqmweza0/9.png) repeat fixed right bottom;*/
     /*background:rgba(170, 195, 252, 0.44);*/
 
@@ -27,7 +27,7 @@ div#top{
     position:relative;
     clear:both;
 /*    float:left;*/
-    background: url(https://raw.github.com/yykozy/hair-arrange/master/img/water01.png) repeat scroll left top;
+    background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/water01.png) repeat scroll left top;
 /*    background: #000 url(http://localhost/hair-arrange/img/K6.png) repeat fixed right bottom;*/
 /*
     background: #000 url(http://static.tumblr.com/bhwyguc/fPrmwezms/k6.png) repeat fixed right bottom;
@@ -142,7 +142,7 @@ section.news{
 /*    
     background: none repeat scroll 0 0 rgba(255, 255, 255, 0.44);
 */
-    background: #000 url(https://raw.github.com/yykozy/hair-arrange/master/img/2.png) repeat scroll right bottom;
+    background: #000 url(https://rawgithub.com/yykozy/hair-arrange/master/img/2.png) repeat scroll right bottom;
     border-radius: 4px 4px 4px 4px;
     padding:10px;
     margin: 10px;
@@ -391,6 +391,6 @@ h1{
     text-align:center;
 }
 .loading_heart{
-    background: url(https://raw.github.com/yykozy/hair-arrange/master/img/loading_heart.gif) no-repeat scroll center transparent;
+    background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/loading_heart.gif) no-repeat scroll center transparent;
     height:50px;
 }
