@@ -10,9 +10,9 @@ $(function(){
         long	:'ロング',
     };
     var event = {
-        'leader 2013.08'            :'おしゃりーだ@2013.08',
-        'kids collection 2013.11'	:'関西キッズコレクション@2013.11',        
-        'leader 2013.11'            :'おしゃりーだ@2013.11',
+        'leader_201308'            :'おしゃりーだ@2013.08',
+        'kids-collection_201311'	:'関西キッズコレクション@2013.11',        
+        'leader_201311'            :'おしゃりーだ@2013.11',
     };
 
     var gettumblr=function(opt){
@@ -29,7 +29,7 @@ $(function(){
     //preloading
     $('#indicator').fadeIn(300);
 
-    gettumblr({tag:'news',limit:0,callback:function(data){
+    gettumblr({tag:'news',offset:0,callback:function(data){
             console.log(data);
             if(data.response){
                 var posts=data.response.posts;
@@ -54,9 +54,9 @@ $(function(){
             }
     }});
     
-    
+/*    
     var wrap=function(offset,datas){
-        console.log(datas);
+//        console.log(datas);
         gettumblr({tag:'gallery',offset:offset,callback:function(data){
             if(data.response){
                 var posts=data.response.posts;
@@ -74,9 +74,14 @@ $(function(){
             }
         }});
     }
-    
-    var datas=[];
-    wrap(0,datas);
+*/
+    $.getJSON(
+        "http://chocobread.webcrow.jp/oden/apc.php?json=?",
+            function(datas){console.log(datas);make_grid(datas);}
+        );
+
+//    var datas=[];
+//    wrap(0,datas);
 
     var make_grid=function(posts){
             var alltags={all:0};
@@ -119,7 +124,33 @@ $(function(){
                     $("#mix-grid").append(html);
                 }
 
-                for(var j in alltags){
+                for(var j in event){
+                    if(typeof(alltags[j])=='undefined'){
+                        continue;
+                    }
+                    var badge=$("<span class='badge badge-danger'>"+alltags[j]+"</span>");
+                    var button=$("<button/>").attr("type","button");
+                    button.addClass("btn btn-warning btn-xs").append(event[j]+" ").append(badge);
+/*                    .click(function(e){
+                           $(e.target).toggleClass('active');
+                           });
+*/
+                    $("<li class='filter' data-filter='"+j+"'/>").append(button)
+                    .appendTo($("#mix-filter1"));
+                }
+                
+                for(var j in category){
+                    if(typeof(alltags[j])=='undefined'){
+                        continue;
+                    }
+                    var badge=$("<span class='badge badge-danger'>"+alltags[j]+"</span>");
+                    var button=$("<button/>").attr("type","button");
+                    button.addClass("btn btn-info btn-xs").append(category[j]+" ").append(badge);
+                    $("<li class='filter' data-filter='"+j+"'/>").append(button)
+                    .appendTo($("#mix-filter2"));
+                }
+/*
+        for(var j in alltags){
                     var badge=$("<span class='badge badge-danger'>"+alltags[j]+"</span>");
                     var button=$("<button/>").attr("type","button");
                     if(typeof(category[j])!='undefined'){
@@ -133,7 +164,7 @@ $(function(){
                     $("<li class='filter' data-filter='"+j+"'/>").append(button)
                     .appendTo($("#mix-filter"));
                 }
-                
+*/                
                 $('.mix').click(function(){
                     $("#mask").addClass('maskBK');
                     $("#top").css("position","fixed");
@@ -177,7 +208,18 @@ $(function(){
                   targetSelector: '.mix',
                   filterSelector: '.filter',
             //      sortSelector: '.sort'
-                })
+                   showOnLoad: 'leader_201311',
+                    onMixEnd: function(){
+                        $("section.gallery").height($('#mix-filter1').height()+$('#mix-filter2').height()+$('#mix-grid').height());
+                    },
+
+                });
+/*
+                $('#mix-grid').bind('onMixLoad',function(){
+//                    $('#mix-grid').mixitup('filter','leader_2013.11');
+                    console.log("ready!");
+                });
+                */
     }
 
 //SlideShow

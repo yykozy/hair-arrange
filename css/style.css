@@ -92,7 +92,7 @@ div#top{
 }
 #left{
     float:left;
-    width:350px;
+/*    width:350px;*/
 }
 #right{
     float:left;
@@ -194,7 +194,8 @@ section.gallery{
     border-radius: 4px 4px 4px 4px;
 /*    padding: 20px;*/
     margin: 10px;
-    height:1000px;
+    height:auto;
+/*    height:1000px;*/
 /*
     position: relative;
 */
@@ -314,18 +315,21 @@ section.fb article{
     width:100px;
 }
 /********* FOOTER ***********/
-#footer{
+#footer div{
+    float:right;
+}
+/*#footer{
     float:left;
-/*    width:980px;*/
+    width:980px;
     background: none repeat scroll 0 0 rgba(255, 255, 24, 0.37);
-/*
+
     border-radius: 4px 4px 4px 4px;
     padding: 10px;
     margin: 10px;
-*/
     height:30px;
     width:100%;
-}
+}*/
+
 section.fb article{
     width:100px;
 }
