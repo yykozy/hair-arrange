@@ -344,7 +344,7 @@ section.fb article{
     background: #FFFFFF;
     /*width:600px;*/
     width:800px;
-    top:10%;
+    top:80px;
     margin:0 auto;
     padding:10px;
     border-radius: 8px;
@@ -357,7 +357,7 @@ section.fb article{
     height:100%;
     width:100%;
     background:#000; opacity: 0.9;filter: alpha(opacity=90);-moz-opacity:0.90;margin:0px;padding:0px;}
-.close{margin-top:30px;cursor: pointer;}
+.close{cursor: pointer;}
 
 #modalImg img.top{
 }
