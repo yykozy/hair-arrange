@@ -334,9 +334,12 @@ section.fb article{
     width:100px;
 }
 
-#modal{display:none;}
+#modal{
+    display:none;
+    margin:0 auto;
+}
 .modalBody{
-    position: absolute;
+    position: relative;
     z-index:1000;
     background: #FFFFFF;
     /*width:600px;*/
@@ -354,7 +357,7 @@ section.fb article{
     height:100%;
     width:100%;
     background:#000; opacity: 0.9;filter: alpha(opacity=90);-moz-opacity:0.90;margin:0px;padding:0px;}
-.close{cursor: pointer;}
+.close{margin-top:30px;cursor: pointer;}
 
 #modalImg img.top{
 }
