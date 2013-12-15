@@ -31,7 +31,7 @@ $(function(){
     $('#indicator').fadeIn(300);
 
     gettumblr({tag:'news',offset:0,callback:function(data){
-            console.log(data);
+            //console.log(data);
             if(data.response){
                 var posts=data.response.posts;
                 for(var i=0;i<posts.length;i++){
@@ -78,7 +78,7 @@ $(function(){
 */
     $.getJSON(
         "http://chocobread.webcrow.jp/oden/apc.php?json=?",
-            function(datas){console.log(datas);make_grid(datas);}
+            function(datas){make_grid(datas);}
         );
 
 //    var datas=[];
