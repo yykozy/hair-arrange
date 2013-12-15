@@ -92,43 +92,78 @@ div#top{
 }
 #left{
     float:left;
-/*    width:350px;*/
+    width:380px;
 }
 #right{
     float:left;
+    width:550px;
 }
 #slideshow{
-/*
-    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.44);
-*/
-    border-radius: 4px 4px 4px 4px;
-    margin:10px 10px 30px 10px;
-/*    background: url(http://localhost/hair-arrange/img/hagire_blue01.png) no-repeat scroll center;*/
-    background-size:contain;
-    height:300px;
-    width:300px;    
+    position:relative;
+    background:
+        url(https://rawgithub.com/yykozy/hair-arrange/master/img/lace_01/lace_01.png) no-repeat scroll left top,
+        url(https://rawgithub.com/yykozy/hair-arrange/master/img/lace_01/lace_03.png) no-repeat scroll right top,
+        url(https://rawgithub.com/yykozy/hair-arrange/master/img/lace_01/lace_07.png) no-repeat scroll left bottom,
+        url(https://rawgithub.com/yykozy/hair-arrange/master/img/lace_01/lace_09.png) no-repeat scroll right bottom;
+    height:350px;
+    width:350px;
+}
+#slideshow div.top{
+    position:absolute;
+    top:0px;
+    left:42px;
+    background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/lace_01/lace_02.png) repeat scroll top left;
+    height:37px;
+    width:266px;
+}
+#slideshow div.left{
+    position:absolute;
+    top:37px;
+    left:0px;
+    background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/lace_01/lace_04.png) repeat scroll top left;
+    height:276px;
+    width:42px;
+}
+#slideshow div.right{
+    position:absolute;
+    top:37px;
+    right:0px;
+    background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/lace_01/lace_06.png) repeat scroll top left;
+    height:276px;
+    width:42px;
+}
+#slideshow div.bottom{
+    position:absolute;
+    bottom:0px;
+    left:42px;
+    background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/lace_01/lace_08.png) repeat scroll top left;
+    height:37px;
+    width:266px;
 }
 #slideshow ul{
-    position:relative;
     display: block;
-    margin:0 5 0 0 ;
+/*    margin:0 5 0 0 ;*/
+/*    z-index:0;*/
 /*
     width:300px;
     height:300px;
 */
 }
 #slideshow ul li{
+    padding: 26px;
     position:absolute;
     top:0px;
     left:0px;
     margin:0;
-    padding:0;
-    */
+/*    padding:0;*/
     /*
     margin-left: auto;
     margin-right: auto;
     text-align: center;
 */
+}
+#slideshow ul li img{
+    position:absolute;
 }
 
 section{
@@ -147,7 +182,16 @@ section.news{
     padding:10px;
     margin: 10px;
     position: relative;
+    width:350px;
 }
+
+section.news div.panel-heading{
+    padding:5px 15px;
+}
+section.news div.panel-body{
+    margin:0px;
+}
+/*
 section.news article{
     background: none repeat scroll 0 0 #FFFFFF;
     border-radius: 4px 4px 4px 4px;
@@ -155,13 +199,18 @@ section.news article{
     padding: 15px;
 /*    height:50px;*/
 /*    border: solid 1px rgb(0,0,0);*/
-    font-family:'Times New Roman','ＭＳ Ｐ明朝',serif;
+/*
+font-family:'Times New Roman','ＭＳ Ｐ明朝',serif;
 }
+*/
+/*
 section.news article span{
 /*    border: 1px dotted #919191;*/
     float: left;
     margin: 5px;
 }
+*/
+
 section.news article p{
     margin:5px;
 }
@@ -187,9 +236,109 @@ section.news article div.title{
     margin-bottom:3px;
 }
 
+/******************************/
+/*section.staff{
+    height:100px;
+}*/
+/*
+section.staff{
+    clear:both;
+    background: url(http://localhost/hair-arrange/img/staff_logo05.png) no-repeat scroll center;
+    border-radius: 4px 4px 4px 4px;
+    padding:10px;
+    margin: 10px;
+    position: relative;
+    width:300px;
+    height:100px;
+}
+*/
+section.staff{
+    position:relative;
+    background:
+        url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/1.png) no-repeat scroll left top,
+        url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/3.png) no-repeat scroll right top,
+        url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/7.png) no-repeat scroll left bottom,
+        url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/9.png) no-repeat scroll right bottom;
+    width:350px;
+    height:100px;
+}
+section.staff div.pin{
+    position:absolute;    
+    background:  url(https://rawgithub.com/yykozy/hair-arrange/master/img/pin01.png) no-repeat scroll center;
+    height:22px;
+    width:19px;
+    left:165px;
+    top:10px;
+}
+section.staff div.top{
+    position:absolute;
+    top:0px;
+    left:54px;
+    background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/2.png) repeat scroll top left;
+    height:52px;
+    width:243px;
+}
+section.staff div.center{
+    z-index:1000;
+    position:absolute;
+    background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/staff_logo06.png) no-repeat scroll left top;
+    background-size:150px;
+    top:10px;
+    left:20px;
+    width:300px;
+    height:100px;
+}
+section.staff div.left{
+    position:absolute;
+    top:52px;
+    left:0px;
+    background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/4.png) repeat scroll top left;
+    height:0px;
+    width:54px;
+}
+section.staff div.right{
+    position:absolute;
+    top:52px;
+    right:0px;
+    background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/6.png) repeat scroll top right;
+    height:0px;
+    width:53px;
+}
+section.staff div.bottom{
+    position:absolute;
+    bottom:0px;
+    left:54px;
+    background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/8.png) repeat scroll bottom left;
+    height:54px;
+    width:243px;
+}
+section.staff div p{
+    position:absolute;
+    left:15px;
+    top:35px;
+    width:300px;
+    height:100px;
+}
+/******************************/
+
+section.staff2{
+    clear:both;
+    background: none repeat scroll 0 0 #FFFFFF;
+    border-radius: 4px 4px 4px 4px;
+    padding:10px;
+    margin: 10px;
+    position: relative;
+}
+section.staff2 li{
+    list-style-type: square;
+}
+
+.mailformasp_error_text{
+    color:red;
+}
 section.gallery{
     float:right;
-    width:600px;
+    width:550px;
     background: none repeat scroll 0 0 rgba(255, 255, 255, 0);
     border-radius: 4px 4px 4px 4px;
 /*    padding: 20px;*/

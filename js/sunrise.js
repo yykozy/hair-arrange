@@ -14,6 +14,7 @@ $(function(){
         'kids-collection_201311'	:'関西キッズコレクション@2013.11',        
         'leader_201311'            :'おしゃりーだ@2013.11',
     };
+    var onActive = 'leader_201311';
 
     var gettumblr=function(opt){
         $.getJSON(
@@ -49,7 +50,7 @@ $(function(){
                     var href=$("<a href='/news?id="+news_id+"'>"+title+"</a>")
 
                     html.append($("<p class='date new'>"+date+"</p>")).append(href);
-                    $("#main section.news").append(html);
+                    $("#main section.news div.panel-body.article").append(html);
                 }
             }
     }});
@@ -124,6 +125,11 @@ $(function(){
                     $("#mix-grid").append(html);
                 }
 
+                var btntgl=function(e){
+                    $('#mix-filter1 li button').removeClass('active');
+                    $('#mix-filter2 li button').removeClass('active');
+                    $(e.target).addClass('active');
+                }
                 for(var j in event){
                     if(typeof(alltags[j])=='undefined'){
                         continue;
@@ -131,12 +137,13 @@ $(function(){
                     var badge=$("<span class='badge badge-danger'>"+alltags[j]+"</span>");
                     var button=$("<button/>").attr("type","button");
                     button.addClass("btn btn-warning btn-xs").append(event[j]+" ").append(badge);
-/*                    .click(function(e){
-                           $(e.target).toggleClass('active');
-                           });
-*/
+                    button.click(btntgl);
                     $("<li class='filter' data-filter='"+j+"'/>").append(button)
                     .appendTo($("#mix-filter1"));
+                    //default
+                    if(j==onActive){
+                        button.addClass('active');
+                    }
                 }
                 
                 for(var j in category){
@@ -146,6 +153,7 @@ $(function(){
                     var badge=$("<span class='badge badge-danger'>"+alltags[j]+"</span>");
                     var button=$("<button/>").attr("type","button");
                     button.addClass("btn btn-info btn-xs").append(category[j]+" ").append(badge);
+                    button.click(btntgl);
                     $("<li class='filter' data-filter='"+j+"'/>").append(button)
                     .appendTo($("#mix-filter2"));
                 }
@@ -208,7 +216,7 @@ $(function(){
                   targetSelector: '.mix',
                   filterSelector: '.filter',
             //      sortSelector: '.sort'
-                   showOnLoad: 'leader_201311',
+                   showOnLoad: onActive,
                     onMixEnd: function(){
                         $("section.gallery").height($('#mix-filter1').height()+$('#mix-filter2').height()+$('#mix-grid').height());
                     },
@@ -243,7 +251,7 @@ $(function(){
     var imgdom=[];
     $.each(images,function(i){
 //        var img=$("<img/>").attr("src","../../img/"+this).load(function(e){
-        var img=$("<img/>").attr("src",this).load(function(e){
+        var img=$("<img/>").attr("src",this).css('position','absolute').css('z-index','100').load(function(e){
             var w=$(e.target).width();
             var h=$(e.target).height();
             //w>h && w>300 -> w=300
