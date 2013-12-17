@@ -30,7 +30,7 @@ $(function(){
     //preloading
     $('#indicator').fadeIn(300);
 
-    gettumblr({tag:'news-test',offset:0,callback:function(data){
+    gettumblr({tag:'news',offset:0,callback:function(data){
             //console.log(data);
             if(data.response){
                 var posts=data.response.posts;

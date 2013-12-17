@@ -25,7 +25,7 @@ $(function(){
     
         var opt={
             url:api_url,
-            tag:'news-test',
+            tag:'news',
             callback:function(data)
             {
                 if(data.response){
