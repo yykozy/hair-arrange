@@ -20,17 +20,25 @@ $(function(){
     var getdate=function(datestr){
         return datestr.replace(/:.. GMT/g,'').replace(/-/g,'.');
     }
-    
-    $("section.news").width(700);
+
+    $("section.news2").width(750);
     
         var opt={
             url:api_url,
-            tag:'news',
+            tag:'news-test',
             callback:function(data)
             {
                 if(data.response){
                     var posts=data.response.posts;
                     for(var i=0;i<posts.length;i++){
+                    var center=$('<div class="center" />');
+                    var info=
+                        $('<div class="info" />').html(
+                            '<div class="top" />'+
+                            '<div class="left" />'+
+                            '<div class="right" />'+
+                            '<div class="pin2" />'+
+                            '<div class="bottom" />').append(center);
                         var html=$("<article />").addClass("clearfix");
                         var url=posts[i].short_url;
                         var date=getdate(posts[i].date);
@@ -51,9 +59,9 @@ $(function(){
                             }
                         );
 
-                        html.append($("<p class='date new'>"+date+"</p>")).append(title)/*.append("<hr/>")*/.append(body);
-                        $("#main section.news").append(html);
-                        $("section.news article").height("auto");
+                        html.append($("<p class='date new'>"+date+"</p>")).append(title)/*.append("<hr/>")*/.append(body).appendTo(center);
+                        $("#main section.news2").append(info);
+                        $("section.news2 article").height("auto");
                     }
                 }
             }

@@ -1,40 +1,19 @@
 body{
-/*    background: #000 url(http://localhost/hair-arrange/img/c1.png) repeat fixed right bottom;*/
-/*
-    background: url(http://localhost/hair-arrange/img/park.jpg) no-repeat fixed center;
-    background-size:cover;
-*/
-        background: #000 url(https://rawgithub.com/yykozy/hair-arrange/master/img/snow-a3.png) repeat fixed right bottom;
-/*    background: #000 url(http://static.tumblr.com/bhwyguc/Kzqmweza0/9.png) repeat fixed right bottom;*/
-    /*background:rgba(170, 195, 252, 0.44);*/
-
+    background: #000 url(https://rawgithub.com/yykozy/hair-arrange/master/img/snow-a3.png) repeat fixed right bottom;
 }
 div#top{
-/*    background-color: rgba(250, 53, 6, 0.3);*/
     text-align: left;
-
 }
 #header{
-/*    clear:both;
-    float:left;*/
     position:relative;
-/*    margin-top:10px;*/
     width: 980px;
     margin: 10px auto 0 auto;
-/*    background-color: #fff;*/
 }
 .hr{
     position:relative;
     clear:both;
-/*    float:left;*/
     background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/water01.png) repeat scroll left top;
-/*    background: #000 url(http://localhost/hair-arrange/img/K6.png) repeat fixed right bottom;*/
-/*
-    background: #000 url(http://static.tumblr.com/bhwyguc/fPrmwezms/k6.png) repeat fixed right bottom;
-    margin: 0 auto;
-*/
     text-align: left;
-/*    width: 980px;*/
     width:auto;
     height:30px; 
 }
@@ -55,7 +34,6 @@ div#top{
 }
 .sub p{
     float: left;
-/*    vertical-align: middle;*/
     text-align:center;
     margin: 0px 0px 0px 0px;
 }
@@ -72,13 +50,10 @@ div#top{
 }
 .slink{
     float:left;
-/*    text-align:right*/
 }
 #main{
     clear:both;
-/*    float:left;*/
     position:relative;
-/*    height: 350px;*/
     width: 980px;
     margin: 0 auto;
 }
@@ -108,6 +83,7 @@ div#top{
     height:350px;
     width:350px;
 }
+
 #slideshow div.top{
     position:absolute;
     top:0px;
@@ -140,14 +116,9 @@ div#top{
     height:37px;
     width:266px;
 }
+
 #slideshow ul{
     display: block;
-/*    margin:0 5 0 0 ;*/
-/*    z-index:0;*/
-/*
-    width:300px;
-    height:300px;
-*/
 }
 #slideshow ul li{
     padding: 26px;
@@ -155,67 +126,32 @@ div#top{
     top:0px;
     left:0px;
     margin:0;
-/*    padding:0;*/
-    /*
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-*/
 }
 #slideshow ul li img{
     position:absolute;
 }
 
 section{
-/*
-    background: #000 url(http://localhost/hair-arrange/img/9.png) repeat fixed right bottom;
-*/
-    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.2);
 }
 section.news{
     clear:both;
-/*    
-    background: none repeat scroll 0 0 rgba(255, 255, 255, 0.44);
-*/
-    background: #000 url(https://rawgithub.com/yykozy/hair-arrange/master/img/2.png) repeat scroll right bottom;
-    border-radius: 4px 4px 4px 4px;
-    padding:10px;
-    margin: 10px;
     position: relative;
     width:350px;
 }
 
-section.news div.panel-heading{
-    padding:5px 15px;
-}
-section.news div.panel-body{
-    margin:0px;
-}
-/*
-section.news article{
-    background: none repeat scroll 0 0 #FFFFFF;
-    border-radius: 4px 4px 4px 4px;
-    margin: 3px 3px 5px 3px;
-    padding: 15px;
-/*    height:50px;*/
-/*    border: solid 1px rgb(0,0,0);*/
-/*
-font-family:'Times New Roman','ＭＳ Ｐ明朝',serif;
-}
-*/
-/*
-section.news article span{
-/*    border: 1px dotted #919191;*/
-    float: left;
-    margin: 5px;
-}
-*/
-
-section.news article p{
-    margin:5px;
+section.news article p.title{
+    position:relative;
+    left:10px;
+    width:320px;
+    font-family:'Times New Roman','ＭＳ Ｐ明朝',serif;
+    width:320px;
 }
 section.news article p.date{
+    position:relative;
     font-size:12px;
+    left:10px;
+    top:10px;    
+    font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;
 }
 section.news article p.new:after{
     margin:5px 5px;
@@ -228,31 +164,24 @@ section.news article p img{
     margin:0px 15px 0px 0px; 
     border-radius: 4px;
 }
-section.news article div.title{
-/*    font-family:'Lucida Grande', 'Hiragino Kaku Gothic ProN', 'ヒラギノ角ゴ ProN W3', Meiryo, メイリオ, sans-serif;*/
-    font-size:1.5em;
-    font-weight:bold;
-/*    font-family:'Times New Roman','ＭＳ Ｐ明朝',serif;*/
-    margin-bottom:3px;
-}
 
-/******************************/
-/*section.staff{
-    height:100px;
-}*/
-/*
-section.staff{
-    clear:both;
-    background: url(http://localhost/hair-arrange/img/staff_logo05.png) no-repeat scroll center;
-    border-radius: 4px 4px 4px 4px;
-    padding:10px;
-    margin: 10px;
-    position: relative;
-    width:300px;
-    height:100px;
+
+section.staff div.info div p.staff_logo{
+    position:absolute;
+    background: url(http://rawgithub.com/yykozy/hair-arrange/master/img/staff_logo06.png) no-repeat scroll top left;
+    background-size: 140px 40px;
+    left:15px;
+    width:140px;
+    height:40px;
 }
-*/
-section.staff{
+section.staff div.info div.center p.text{
+    position:absolute;
+    top:40px;
+    left:20px;
+    width:330px;
+    font-family:'Times New Roman','ＭＳ Ｐ明朝',serif;
+}
+section div.info{
     position:relative;
     background:
         url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/1.png) no-repeat scroll left top,
@@ -262,7 +191,7 @@ section.staff{
     width:350px;
     height:100px;
 }
-section.staff div.pin{
+section div.info div.pin{
     position:absolute;    
     background:  url(https://rawgithub.com/yykozy/hair-arrange/master/img/pin01.png) no-repeat scroll center;
     height:22px;
@@ -270,7 +199,15 @@ section.staff div.pin{
     left:165px;
     top:10px;
 }
-section.staff div.top{
+section div.info div.pin2{
+    position:absolute;    
+    background:  url(http://rawgithub.com/yykozy/hair-arrange/master/img/pin02.png) no-repeat scroll center;
+    height:22px;
+    width:19px;
+    left:165px;
+    top:10px;
+}
+section div.info div.top{
     position:absolute;
     top:0px;
     left:54px;
@@ -278,17 +215,13 @@ section.staff div.top{
     height:52px;
     width:243px;
 }
-section.staff div.center{
+
+section div.info div.center{
     z-index:1000;
     position:absolute;
-    background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/staff_logo06.png) no-repeat scroll left top;
-    background-size:150px;
-    top:10px;
-    left:20px;
-    width:300px;
-    height:100px;
+    padding:10px;
 }
-section.staff div.left{
+section div.info div.left{
     position:absolute;
     top:52px;
     left:0px;
@@ -296,7 +229,7 @@ section.staff div.left{
     height:0px;
     width:54px;
 }
-section.staff div.right{
+section div.info div.right{
     position:absolute;
     top:52px;
     right:0px;
@@ -304,7 +237,7 @@ section.staff div.right{
     height:0px;
     width:53px;
 }
-section.staff div.bottom{
+section div.info div.bottom{
     position:absolute;
     bottom:0px;
     left:54px;
@@ -312,13 +245,117 @@ section.staff div.bottom{
     height:54px;
     width:243px;
 }
-section.staff div p{
-    position:absolute;
-    left:15px;
-    top:35px;
-    width:300px;
-    height:100px;
+section div.info div p{
+/*    margin:15px;*/
 }
+/******************************/
+section.news2{
+    clear:both;
+    position: relative;
+    width:750px;
+}
+
+section.news2 article p.title{
+    left:80px;
+}
+section.news2 article p.date{
+    font-size:15px;
+    left:80px;
+    top:80px;    
+}
+section.news2 article p.new:after{
+    margin:5px 5px;
+    content: url(http://static.tumblr.com/bhwyguc/SFFmwezna/new021_18.gif);
+}
+section.news2 article p img{
+    height:100px;
+    width:100px;
+    float:left;
+    margin:0px 15px 0px 0px; 
+    border-radius: 4px;
+}
+section.news2 article div.title{
+    font-size:1.5em;
+    font-weight:bold;
+    margin-bottom:3px;
+}
+
+section.news2 div.info{
+    position:relative;
+    background:
+        url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/1.png) no-repeat scroll left top,
+        url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/3.png) no-repeat scroll right top,
+        url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/7.png) no-repeat scroll left bottom,
+        url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/9.png) no-repeat scroll right bottom;
+    width:750px;
+    height:500px;
+}
+section.news2 div.info div.pin{
+    position:absolute;    
+    background:  url(https://rawgithub.com/yykozy/hair-arrange/master/img/pin01.png) no-repeat scroll center;
+    height:22px;
+    width:19px;
+    left:165px;
+    top:10px;
+}
+section.news2 div.info div.pin2{
+    position:absolute;    
+    background:  url(http://rawgithub.com/yykozy/hair-arrange/master/img/pin02.png) no-repeat scroll center;
+    height:22px;
+    width:19px;
+    left:365px;
+    top:10px;
+}
+section.news2 div.info div.top{
+    position:absolute;
+    top:0px;
+    left:54px;
+    background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/2.png) repeat scroll top left;
+    height:52px;
+    width:643px;
+}
+
+section.news2 div.info div.center{
+    z-index:1000;
+    position:absolute;
+    top:52px;
+    left:54px;
+    background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/5.png) repeat scroll top left;
+    height:394px;
+    width:643px;
+}
+
+section.news2 div.info div.left{
+    position:absolute;
+    top:52px;
+    left:0px;
+    background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/4.png) repeat scroll top left;
+    height:394px;/*500-(54+52)*/
+    width:54px;
+}
+
+section.news2 div.info div.right{
+    position:absolute;
+    top:52px;
+    right:0px;
+    background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/6.png) repeat scroll top right;
+    height:394px;
+    width:53px;
+}
+section.news2 div.info div.bottom{
+    position:absolute;
+    bottom:0px;
+    left:54px;
+    background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/8.png) repeat scroll bottom left;
+    height:54px;
+    width:643px;
+}
+
+section.news2 div.info div p{
+    margin:15px;
+}
+
+
 /******************************/
 
 section.staff2{
@@ -341,20 +378,9 @@ section.gallery{
     width:550px;
     background: none repeat scroll 0 0 rgba(255, 255, 255, 0);
     border-radius: 4px 4px 4px 4px;
-/*    padding: 20px;*/
     margin: 10px;
     height:auto;
-/*    height:1000px;*/
-/*
-    position: relative;
-*/
 }
-/*
-section.gallery p{
-    margin:0;
-    padding:0;
-}
-*/
 section.gallery ul{
     clear:both;
     margin:0px;
@@ -366,18 +392,15 @@ li {
 
 section.gallery ul li.filter{
     float:left;
-/*    font-size:smaller;*/
     margin:3px;
 }
 
 section.gallery ul#mix-filter{
-/*    height:20px;*/
     margin-bottom:10px;
 }
 section.gallery ul#mix-grid{
     overflow:hidden;
     position:absolute;
-/*    top:120px;*/
 }
 .mix{
     opacity: 0;
@@ -467,17 +490,6 @@ section.fb article{
 #footer div{
     float:right;
 }
-/*#footer{
-    float:left;
-    width:980px;
-    background: none repeat scroll 0 0 rgba(255, 255, 24, 0.37);
-
-    border-radius: 4px 4px 4px 4px;
-    padding: 10px;
-    margin: 10px;
-    height:30px;
-    width:100%;
-}*/
 
 section.fb article{
     width:100px;
@@ -512,10 +524,8 @@ section.fb article{
 }
 #modalImg{
     clear:both;
-/*    margin:5px;*/
 }
 .modalBody img{
-/*    border:1px #000 solid;    */
 }
 
 .badge-warning{

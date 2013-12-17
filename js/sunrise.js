@@ -30,11 +30,20 @@ $(function(){
     //preloading
     $('#indicator').fadeIn(300);
 
-    gettumblr({tag:'news',offset:0,callback:function(data){
+    gettumblr({tag:'news-test',offset:0,callback:function(data){
             //console.log(data);
             if(data.response){
                 var posts=data.response.posts;
                 for(var i=0;i<posts.length;i++){
+                    var center=$('<div class="center" />');
+                    var info=
+                        $('<div class="info" />').html(
+                            '<div class="top" />'+
+                            '<div class="left" />'+
+                            '<div class="right" />'+
+                            '<div class="pin2" />'+
+                            '<div class="bottom" />').append(center);
+    //                console.log(info);
                     var html=$("<article />");
                     var url=posts[i].short_url;
                     var date=getdate(posts[i].date);
@@ -47,10 +56,10 @@ $(function(){
                     }else if(posts[i].type=="text"){
                         var title=posts[i].title;
                     }
-                    var href=$("<a href='/news?id="+news_id+"'>"+title+"</a>")
+                    var href=$("<p class='title' />").append("<a href='/news?id="+news_id+"'>"+title+"</a>");
 
-                    html.append($("<p class='date new'>"+date+"</p>")).append(href);
-                    $("#main section.news div.panel-body.article").append(html);
+                    html.append($("<p class='date new'>"+date+"</p>")).append(href).appendTo(center);
+                    $("#main section.news").append(info);
                 }
             }
     }});
