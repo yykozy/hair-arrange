@@ -57,8 +57,15 @@ $(function(){
                         var title=posts[i].title;
                     }
                     var href=$("<p class='title' />").append("<a href='/news?id="+news_id+"'>"+title+"</a>");
-
-                    html.append($("<p class='date new'>"+date+"</p>")).append(href).appendTo(center);
+                    var date=$("<p/>").html(date).addClass('date');
+                    var tags = posts[i].tags;
+                    for(var j=0;j<tags.length;j++){
+                        if(tags[j]=="new"){
+                            date.addClass('new');
+                            break;
+                        }
+                    }
+                    html.append(date).append(href).appendTo(center);
                     $("#main section.news").append(info);
                 }
             }

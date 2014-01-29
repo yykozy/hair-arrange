@@ -50,18 +50,26 @@ $(function(){
                         }else if(posts[i].type=="text"){
                             var title=$("<div/>").addClass('title').html(posts[i].title);
                         }
-//                    var href=$("<a href='"+url+"'>"+title+"</a>")
-                        var body=$("<p/>");
-                    //var posts[i].body;
-                        $("<div/>").html(posts[i].body).find("p").each(
-                            function(){
-                                body.append($(this).html().replace(/<[¥/]*span>/g,""));
+                        var body=$("<div/>");
+                        $("<div/>").html(posts[i].body).appendTo(body);
+                        var date=$("<p/>").html(date).addClass('date');
+                        var tags = posts[i].tags;
+                        for(var j=0;j<tags.length;j++){
+                            if(tags[j]=="new"){
+                                date.addClass('new');
+                                break;
                             }
-                        );
-
-                        html.append($("<p class='date new'>"+date+"</p>")).append(title)/*.append("<hr/>")*/.append(body).appendTo(center);
+                        }
+                        html.append(date).append(title).append(body).appendTo(center);
                         $("#main section.news2").append(info);
                         $("section.news2 article").height("auto");
+                        var height = $('section.news2 article').height();
+                        center.height(height-20);
+                        $('section.news2').height(height+104);
+                        $('section.news2 div.info').height(height+104);
+                        $('section.news2 div.info div.left').height(height);
+                        $('section.news2 div.info div.right').height(height);
+                        $('section.news2 div.info div.bottom').css('bottom',0);
                     }
                 }
             }

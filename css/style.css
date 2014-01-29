@@ -267,13 +267,11 @@ section.news2 article p.new:after{
     margin:5px 5px;
     content: url(http://static.tumblr.com/bhwyguc/SFFmwezna/new021_18.gif);
 }
+
 section.news2 article p img{
-    height:100px;
-    width:100px;
-    float:left;
-    margin:0px 15px 0px 0px; 
-    border-radius: 4px;
+    max-width: 125px;
 }
+
 section.news2 article div.title{
     font-size:1.5em;
     font-weight:bold;
@@ -288,7 +286,7 @@ section.news2 div.info{
         url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/7.png) no-repeat scroll left bottom,
         url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/9.png) no-repeat scroll right bottom;
     width:750px;
-    height:500px;
+/*    height:500px;*/
 }
 section.news2 div.info div.pin{
     position:absolute;    
@@ -321,7 +319,7 @@ section.news2 div.info div.center{
     top:52px;
     left:54px;
     background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/5.png) repeat scroll top left;
-    height:394px;
+/*    height:394px;*/
     width:643px;
 }
 
@@ -330,7 +328,7 @@ section.news2 div.info div.left{
     top:52px;
     left:0px;
     background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/4.png) repeat scroll top left;
-    height:394px;/*500-(54+52)*/
+/*    height:394px;*/
     width:54px;
 }
 
@@ -339,7 +337,7 @@ section.news2 div.info div.right{
     top:52px;
     right:0px;
     background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/yellow/6.png) repeat scroll top right;
-    height:394px;
+/*    height:394px;*/
     width:53px;
 }
 section.news2 div.info div.bottom{
