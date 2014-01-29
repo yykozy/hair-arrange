@@ -30,6 +30,7 @@ $(function(){
             {
                 if(data.response){
                     var posts=data.response.posts;
+                    var info_height=0;
                     for(var i=0;i<posts.length;i++){
                     var center=$('<div class="center" />');
                     var info=
@@ -62,15 +63,16 @@ $(function(){
                         }
                         html.append(date).append(title).append(body).appendTo(center);
                         $("#main section.news2").append(info);
-                        $("section.news2 article").height("auto");
-                        var height = $('section.news2 article').height();
+//                        html.height("auto");
+                        var height = html.height();
                         center.height(height-20);
-                        $('section.news2').height(height+104);
-                        $('section.news2 div.info').height(height+104);
-                        $('section.news2 div.info div.left').height(height);
-                        $('section.news2 div.info div.right').height(height);
-                        $('section.news2 div.info div.bottom').css('bottom',0);
+                        info.height(height+104);
+                        info_height+=height+104;
+                        $('div.left',info).height(height);
+                        $('div.right',info).height(height);
+
                     }
+                    $('section.news2').height(info_height);
                 }
             }
         };
