@@ -13,8 +13,10 @@ $(function(){
         'leader_201308'            :'おしゃりーだ@2013.08',
         'kids-collection_201311'	:'関西キッズコレクション@2013.11',        
         'leader_201311'            :'おしゃりーだ@2013.11',
+        'babycut_201401'             :'ベビーヘアカット@2014.01',
+        'leader_201402'             :'おしゃりーだ@2014.02',
     };
-    var onActive = 'leader_201311';
+    var onActive = 'leader_201402';
 
     var gettumblr=function(opt){
         $.getJSON(

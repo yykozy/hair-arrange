@@ -353,6 +353,13 @@ section.news2 div.info div p{
     margin:15px;
 }
 
+section.news2 p.p1 img{
+    margin-top:15px;
+}
+section.news2 p img{
+    float:left;
+    margin-left :15px;
+}
 
 /******************************/
 
