@@ -561,3 +561,6 @@ h1{
     background: url(https://rawgithub.com/yykozy/hair-arrange/master/img/loading_heart.gif) no-repeat scroll center transparent;
     height:50px;
 }
+a.thumbnail{
+    position:relative;
+}

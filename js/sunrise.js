@@ -15,8 +15,9 @@ $(function(){
         'leader_201311'            :'おしゃりーだ@2013.11',
         'babycut_201401'             :'ベビーヘアカット@2014.01',
         'leader_201402'             :'おしゃりーだ@2014.02',
+        'leader_201404'             :'おしゃりーだ@産経学園_新百合ケ丘',
     };
-    var onActive = 'leader_201402';
+    var onActive = 'leader_201404';
 
     var gettumblr=function(opt){
         $.getJSON(
@@ -221,7 +222,7 @@ $(function(){
                 });
 
                 $('.close,#mask').click(function(){
-                    $("#modal").fadeOut(500,function(){
+                    $("#modal").fadeOut(200,function(){
                         $("#top").css("position","relative");
                         $("#modalImg .row").html("");
                         $("#mask").removeClass('maskBK');
